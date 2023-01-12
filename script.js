@@ -7,7 +7,7 @@ fetch(`https://gateway.marvel.com:443/v1/public/characters?limit=100&ts=${ts}&ap
   .then(resp => {
     const divChar = document.querySelector('#characters')
 
-    resp.data.results.forEach(element => {
+    resp.data.results.forEach((element) => {
       const imgChar = `${element.thumbnail.path}.${element.thumbnail.extension}`
       const nameChar = element.name
 
